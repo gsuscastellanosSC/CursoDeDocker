@@ -46,6 +46,11 @@
         **[Bonus] Play with Docker**
     **Class#6**
         **Qué es y cómo funciona Docker**
+***2. Contenedores**
+    **Class#7**
+        **Primeros pasos: hola mundo**
+            ➔ docker run hello-world;
+  
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
