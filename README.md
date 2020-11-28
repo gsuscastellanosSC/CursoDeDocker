@@ -38,6 +38,9 @@
                 ➔ Bajo acoplamiento
                 ➔ Escalables
                 ➔ Seguros
+    **Class#4**
+        **Preparando tu entorno de trabajo**
+            docker run hello-world;
 **Links**
  Slides Curso Docker:
    https://static.platzi.com/media/public/uploads/slides-curso-docker_d04a71e1-4aa5-4b52-9dea-ba3ad2724202.pdf
