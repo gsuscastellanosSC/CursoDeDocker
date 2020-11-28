@@ -22,7 +22,22 @@
                 ➔ Compatibilidad del entorno productivo
                 ➔ Disponibilidad de servicios externos
                 ➔ Recursos de hardware
-
+    **Class#3**
+        **Virtualización**
+            **Problemas de las VMs**
+                Peso:
+                    En el orden de los GBs. Repiten archivos en común. Inicio lento.
+                Costo de administración:
+                    Necesita mantenimiento igual que cualquier otra computadora.
+                Múltiples de formatos:
+                    VDI, VMDK, VHD, raw, etc.
+            **Containerización**
+                ➔ Flexibles
+                ➔ Livianos
+                ➔ Portables
+                ➔ Bajo acoplamiento
+                ➔ Escalables
+                ➔ Seguros
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
