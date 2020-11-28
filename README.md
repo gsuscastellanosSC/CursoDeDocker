@@ -42,6 +42,8 @@
         **Preparando tu entorno de trabajo**
             docker run hello-world;
             docker info;
+    **Class#5**
+        **[Bonus] Play with Docker**
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
