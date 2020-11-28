@@ -59,6 +59,10 @@
             ➔ docker run --name hello-sc hello-world;
             ➔ docker rename hello-sc helo;
             ➔ docker container prune;<!-- Remove all containers. -->
+    **Class#10**
+        **El modo interactivo**
+            ➔ docker run ubuntu;<!-- Create docker with Ubuntu. -->
+            ➔ docker run -it ubuntu; <!-- Running container in interactive mode-->
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
