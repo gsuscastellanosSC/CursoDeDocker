@@ -63,6 +63,11 @@
         **El modo interactivo**
             ➔ docker run ubuntu;<!-- Create docker with Ubuntu. -->
             ➔ docker run -it ubuntu; <!-- Running container in interactive mode-->
+    **Class#11**
+        **Ciclo de vida de un contenedor**
+            ➔ docker run --name SO -d ubuntu tail -f /dev/null;
+            ➔ docker exec -ti ${NAME} bash;
+            ➔ docker inspect --format '{{.State.Pid}}' ${NAME};
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
