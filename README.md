@@ -44,6 +44,8 @@
             docker info;
     **Class#5**
         **[Bonus] Play with Docker**
+    **Class#6**
+        **Qué es y cómo funciona Docker**
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
