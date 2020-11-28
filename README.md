@@ -52,6 +52,13 @@
             ➔ docker run hello-world;
     **Class#8**
         **Conceptos fundamentales de Docker: contenedores**
+    **Class#9**
+        **Comprendiendo el estado de Docker**
+            ➔ docker inspect CONTAINER ID;
+            ➔ docker inspect NAME;
+            ➔ docker run --name hello-sc hello-world;
+            ➔ docker rename hello-sc helo;
+            ➔ docker container prune;<!-- Remove all containers. -->
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
