@@ -2,26 +2,26 @@
    https://platzi.com/clases/docker/
 **1. Introducción**
     **Class#1**
-    **Bienvenida al curso**
+        **Bienvenida al curso**
     **Class#2**
-    **Las tres áreas en el desarrollo de software profesional**
-        1. Construir:
-            ➔ Entorno de desarrollo
-            ➔ Dependencias
-            ➔ Entorno de ejecución
-            ➔ Equivalencia con entorno productivo
-            ➔ Servicios externos
-        2. Distribuir:
-            ➔ Divergencia de repositorios
-            ➔ Divergencia de artefactos
-            ➔ Versionado
-            ➔ Equivalencia con entorno productivo
-            ➔ Servicios externos
-        3. Ejecutar:
-            ➔ Dependencias de aplicación
-            ➔ Compatibilidad del entorno productivo
-            ➔ Disponibilidad de servicios externos
-            ➔ Recursos de hardware
+        **Las tres áreas en el desarrollo de software profesional**
+            1. Construir:
+                ➔ Entorno de desarrollo
+                ➔ Dependencias
+                ➔ Entorno de ejecución
+                ➔ Equivalencia con entorno productivo
+                ➔ Servicios externos
+            2. Distribuir:
+                ➔ Divergencia de repositorios
+                ➔ Divergencia de artefactos
+                ➔ Versionado
+                ➔ Equivalencia con entorno productivo
+                ➔ Servicios externos
+         3. Ejecutar:
+                ➔ Dependencias de aplicación
+                ➔ Compatibilidad del entorno productivo
+                ➔ Disponibilidad de servicios externos
+                ➔ Recursos de hardware
     **Class#3**
         **Virtualización**
             **Problemas de las VMs**
@@ -46,6 +46,10 @@
         **[Bonus] Play with Docker**
     **Class#6**
         **Qué es y cómo funciona Docker**
+***2. Contenedores**
+    **Class#7**
+        **Primeros pasos: hola mundo**
+            ➔ docker run hello-world;
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
