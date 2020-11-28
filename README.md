@@ -38,6 +38,10 @@
                 ➔ Bajo acoplamiento
                 ➔ Escalables
                 ➔ Seguros
+    **Class#4**
+        **Preparando tu entorno de trabajo**
+            docker run hello-world;
+            docker info;
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
