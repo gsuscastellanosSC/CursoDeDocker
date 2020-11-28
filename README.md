@@ -68,7 +68,15 @@
             ➔ docker run --name SO -d ubuntu tail -f /dev/null;
             ➔ docker exec -ti ${NAME} bash;
             ➔ docker inspect --format '{{.State.Pid}}' ${NAME};
-**Links**
+    **Class#12**
+        **Exponiendo contenedores**
+            ➔ docker run -d --name proxy nginx;      
+            ➔ docker run --name proxy -p 8080:80 nginx;
+                                           |   |__
+                                       Local Port | 
+                                            Container port
+            ➔ docker logs --tail -f proxy;
+**Links**                                   
     Play with Docker:
         https://labs.play-with-docker.com/
     Slides Curso Docker:
