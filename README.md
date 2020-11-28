@@ -50,6 +50,8 @@
     **Class#7**
         **Primeros pasos: hola mundo**
             ➔ docker run hello-world;
+    **Class#8**
+        **Conceptos fundamentales de Docker: contenedores**
 **Links**
     Play with Docker:
         https://labs.play-with-docker.com/
