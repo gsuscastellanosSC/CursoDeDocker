@@ -107,6 +107,11 @@
         **El sistema de capas**
             ➔ docker history ubuntu:platzi;
             ➔ dive ubuntu:platzi;
+    **Class#19**
+        **Usando Docker para desarrollar aplicaciones**
+            ➔ git clone https://github.com/platzi/docker;
+            ➔ docker build -t platziapp .; 
+            ➔ docker run --rm -p 3000:3000 platziapp
 **Links**  
     Wagoodman:
         https://github.com/wagoodman/dive
