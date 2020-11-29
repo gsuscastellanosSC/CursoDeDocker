@@ -92,7 +92,20 @@
             ➔ docker run -d --name ${nameContainer} ubuntu tail -f /dev/null;
             ➔ docker cp ${LocalNameFile} copytest:/${DirRempteName}/${RemoteFileName};
             ➔ docker cp copytest:/${DirRemoteName} ${DirLocalName};
-**Links**                
+**4. Imágenes**
+    **Class#16**
+        **Conceptos fundamentales de Docker: imágenes**
+            ➔ docker image ls;
+            ➔ docker pull ubuntu:${tag};
+    **Class#17**
+        **Construyendo una imagen propia**
+            ➔ docker build -t ubuntu:platzi ~/Documents/github/CursoDeDocker/dockerFiles;
+            ➔ docker run -it ubuntu:${tag};
+            ➔ docker tag ${REPOSITORY}:${TAG} ${propietario}/${so}:${tag};
+            ➔ docker push gsuscastelsc/ubuntu:platzi;
+**Links**       
+    Hub Docker:
+        https://hub.docker.com/
     Play with Docker:
         https://labs.play-with-docker.com/
     Slides Curso Docker:
