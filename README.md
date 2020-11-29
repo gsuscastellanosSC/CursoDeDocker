@@ -66,8 +66,8 @@
     **Class#11**
         **Ciclo de vida de un contenedor**
             ➔ docker run --name SO -d ubuntu tail -f /dev/null;
-            ➔ docker exec -ti ${NAME} bash;
-            ➔ docker inspect --format '{{.State.Pid}}' ${NAME};
+            ➔ docker exec -ti ${nameContainer} bash;
+            ➔ docker inspect --format '{{.State.Pid}}' ${nameContainer};
     **Class#12**
         **Exponiendo contenedores**
             ➔ docker run -d --name proxy nginx;      
@@ -80,14 +80,19 @@
 **3. Datos en Docke**
     **Class#13**
         **Bind mounts**
-            ➔ docker rm -f ${NAME};
+            ➔ docker rm -f ${nameContainer};
             ➔ docker run -d --name dataBaseMongo -v ~/Documents/github/CursoDeDocker/dockerData:/data/db mongo;
     **Class#14**
         **Volúmenes**
             ➔ docker volume ls;
-            ➔ docker volume create ${name};
+            ➔ docker volume create ${nameContainer};
             ➔ docker run -d --name db --mount src=${nameVolume},dst=/data/db mongo
-**Links**                                   
+    **Class#15**
+        **Insertar y extraer archivos de un contenedor**
+            ➔ docker run -d --name ${nameContainer} ubuntu tail -f /dev/null;
+            ➔ docker cp ${LocalNameFile} copytest:/${DirRempteName}/${RemoteFileName};
+            ➔ docker cp copytest:/${DirRemoteName} ${DirLocalName};
+**Links**                
     Play with Docker:
         https://labs.play-with-docker.com/
     Slides Curso Docker:
