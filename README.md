@@ -125,7 +125,19 @@
             ➔ docker network connect platziNet db;
             ➔ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp;
             ➔ docker network connect platziNet app;
-**Links**  
+**6. Docker Compose: la herramienta todo en uno**
+    **Class#22**
+        **Docker Compose: la herramienta todo en uno**
+            Install dockerCompose:
+                ➔  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose;
+                ➔ sudo chmod +x /usr/local/bin/docker-compose;
+                ➔ docker-compose --version;
+            Up docker compose:
+                 docker-compose up;
+                 docker-compose up -d;
+**Links**
+    Install dockerCompose:
+        https://docs.docker.com/compose/install/
     Wagoodman:
         https://github.com/wagoodman/dive
     Hub Docker:
