@@ -2,13 +2,16 @@ version: "3.8"
 
 services:
   app:
-    image: platziapp
+    build: .
     environment:
       MONGO_URL: "mongodb://db:27017/test"
     depends_on:
       - db
     ports:
       - "3000:3000"
-
+    volumes:  
+      - .:/usr/src
+      - /usr/src/node_modules
+    command: npx nodemon index.js
   db:
     image: mongo

@@ -140,6 +140,9 @@
                 ➔ docker-compose logs -f ${nameContainer};
                 ➔ docker-compose exec ${nameContainer} bash;
                 ➔ docker-compose down;
+        **Class#24**
+            **Docker Compose como herramienta de desarrollo**
+                ➔ docker-compose build;
 **Links**
     Install dockerCompose:
         https://docs.docker.com/compose/install/
