@@ -75,7 +75,13 @@
                                            |   |__
                                        Local Port | 
                                             Container port
+            ➔ docker logs -f proxy;
             ➔ docker logs --tail -f proxy;
+**3. Datos en Docke**
+    **Class#13**
+        **Bind mounts**
+            ➔ docker rm -f ${NAME};
+            ➔ docker run -d --name dataBaseMongo -v ~/Documents/github/CursoDeDocker/dockerData:/data/db mongo;
 **Links**                                   
     Play with Docker:
         https://labs.play-with-docker.com/
