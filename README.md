@@ -116,6 +116,15 @@
     **Class#20**
         **Aprovechando el caché de capas para estructurar correctamente tus imágenes**
             ➔ docker run --rm -p 3000:3000 -v /home/sc/Documents/github/CursoDeDocker/index.js:/usr/src/index.js platziapp
+    **Class#21**
+        **Docker networking: colaboración entre contenedores**
+            ➔ docker network ls;
+            ➔ docker network create --attachable platziNet;
+            ➔ docker network inspect platziNet;
+            ➔ docker run -d --name db mongo;
+            ➔ docker network connect platziNet db;
+            ➔ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp;
+            ➔ docker network connect platziNet app;
 **Links**  
     Wagoodman:
         https://github.com/wagoodman/dive
