@@ -82,6 +82,11 @@
         **Bind mounts**
             ➔ docker rm -f ${NAME};
             ➔ docker run -d --name dataBaseMongo -v ~/Documents/github/CursoDeDocker/dockerData:/data/db mongo;
+    **Class#14**
+        **Volúmenes**
+            ➔ docker volume ls;
+            ➔ docker volume create ${name};
+            ➔ docker run -d --name db --mount src=${nameVolume},dst=/data/db mongo
 **Links**                                   
     Play with Docker:
         https://labs.play-with-docker.com/
