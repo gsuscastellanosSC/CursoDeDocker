@@ -103,7 +103,13 @@
             ➔ docker run -it ubuntu:${tag};
             ➔ docker tag ${REPOSITORY}:${TAG} ${propietario}/${so}:${tag};
             ➔ docker push gsuscastelsc/ubuntu:platzi;
-**Links**       
+    **Class#18**
+        **El sistema de capas**
+            ➔ docker history ubuntu:platzi;
+            ➔ dive ubuntu:platzi;
+**Links**  
+    Wagoodman:
+        https://github.com/wagoodman/dive
     Hub Docker:
         https://hub.docker.com/
     Play with Docker:
