@@ -135,23 +135,35 @@
             Up docker compose:
                 ➔ docker-compose up;
                 ➔ docker-compose up -d;
-        **Class#23**
-            **Subcomandos de Docker Compose**
-                ➔ docker-compose logs -f ${nameContainer};
-                ➔ docker-compose exec ${nameContainer} bash;
-                ➔ docker-compose down;
-        **Class#24**
-            **Docker Compose como herramienta de desarrollo**
-                ➔ docker-compose build;
-        **Class#25**
-           **Compose en equipo: override**
-                ➔ touch docker-compose.override.yml;
-                ➔ docker-compose down;
-                ➔ docker-compose up -d --scale app=2;
-**Links**
-    Install dockerCompose:
+    **Class#23**
+        **Subcomandos de Docker Compose**
+            ➔ docker-compose logs -f ${nameContainer};
+            ➔ docker-compose exec ${nameContainer} bash;
+            ➔ docker-compose down;
+    **Class#24**
+        **Docker Compose como herramienta de desarrollo**
+            ➔ docker-compose build;
+    **Class#25**
+       **Compose en equipo: override**
+            ➔ touch docker-compose.override.yml;
+            ➔ docker-compose down;
+            ➔ docker-compose up -d --scale app=2;
+**7. Doker Avanzado**
+    **Cass#26**
+        **Administrando tu ambiente de Docker**
+            ➔ docker ps -a;
+            ➔ docker container prune;<!-- Remove all containers. -->
+            ➔ docker rm -f $(docker ps -aq);
+            ➔ docker system prune;<!-- Remove all containers. example: tag none-->
+            ➔ docker rmi -f $(docker images -aq);
+            ➔ docker volume prune;
+            ➔ docker network prune
+            ➔ docker stats;
+            ➔ docker run -d --name ${name} --memory 1g ${tag};
+**Links*
+    Insall dockerCompose:
         https://docs.docker.com/compose/install/
-    Wagoodman:
+    Wagodman:
         https://github.com/wagoodman/dive
     Hub Docker:
         https://hub.docker.com/
