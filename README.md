@@ -160,6 +160,11 @@
             ➔ docker network prune
             ➔ docker stats;
             ➔ docker run -d --name ${name} --memory 1g ${tag};
+    **Cass#27**
+        **Deteniendo contenedores correctamente: SHELL vs. EXEC**
+            ➔ docker ps -l;
+            ➔ docker kill looper;
+            ➔ docker exec -ti looper ps -ef;
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
