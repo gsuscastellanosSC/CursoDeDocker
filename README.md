@@ -133,8 +133,13 @@
                 ➔ sudo chmod +x /usr/local/bin/docker-compose;
                 ➔ docker-compose --version;
             Up docker compose:
-                 docker-compose up;
-                 docker-compose up -d;
+                ➔ docker-compose up;
+                ➔ docker-compose up -d;
+        **Class#23**
+            **Subcomandos de Docker Compose**
+                ➔ docker-compose logs -f ${nameContainer};
+                ➔ docker-compose exec ${nameContainer} bash;
+                ➔ docker-compose down;
 **Links**
     Install dockerCompose:
         https://docs.docker.com/compose/install/
