@@ -107,11 +107,15 @@
         **El sistema de capas**
             ➔ docker history ubuntu:platzi;
             ➔ dive ubuntu:platzi;
+**5. Docker como herramienta de desarrollo**    
     **Class#19**
         **Usando Docker para desarrollar aplicaciones**
             ➔ git clone https://github.com/platzi/docker;
             ➔ docker build -t platziapp .; 
             ➔ docker run --rm -p 3000:3000 platziapp
+    **Class#20**
+        **Aprovechando el caché de capas para estructurar correctamente tus imágenes**
+            ➔ docker run --rm -p 3000:3000 -v /home/sc/Documents/github/CursoDeDocker/index.js:/usr/src/index.js platziapp
 **Links**  
     Wagoodman:
         https://github.com/wagoodman/dive
