@@ -143,6 +143,11 @@
         **Class#24**
             **Docker Compose como herramienta de desarrollo**
                 ➔ docker-compose build;
+        **Class#25**
+           **Compose en equipo: override**
+                ➔ touch docker-compose.override.yml;
+                ➔ docker-compose down;
+                ➔ docker-compose up -d --scale app=2;
 **Links**
     Install dockerCompose:
         https://docs.docker.com/compose/install/

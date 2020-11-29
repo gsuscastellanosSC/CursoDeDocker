@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    environment:
+      MONGO_URL: "mongodb://db:27017/test"
+    volumes:  
+      - .:/usr/src
+      - /usr/src/node_modules
+    command: npx nodemon index.js
