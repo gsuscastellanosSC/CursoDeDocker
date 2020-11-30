@@ -168,6 +168,9 @@
     **Cass#28**
         **Contenedores ejecutables: ENTRYPOINT vs CMD**
             ➔ run -d --name pinger ping google.com;
+    **Cass#29**
+        **El contexto de build**
+            ➔ touch .dockerignore;
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
