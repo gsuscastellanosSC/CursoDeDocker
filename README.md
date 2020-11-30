@@ -165,6 +165,9 @@
             ➔ docker ps -l;
             ➔ docker kill looper;
             ➔ docker exec -ti looper ps -ef;
+    **Cass#28**
+        **Contenedores ejecutables: ENTRYPOINT vs CMD**
+            ➔ run -d --name pinger ping google.com;
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
