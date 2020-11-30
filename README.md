@@ -177,6 +177,9 @@
     **Cass#31**
         **Docker-in-Docker**
             ➔ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock docker:19.03.12;
+**8. Cierre**
+    **Cass#32**
+        **Cierre del curso**
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
