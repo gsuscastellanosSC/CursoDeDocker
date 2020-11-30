@@ -171,6 +171,9 @@
     **Cass#29**
         **El contexto de build**
             ➔ touch .dockerignore;
+    **Cass#30**
+        **Multi-stage build**
+            ➔ docker build -t prodapp -f build/production.Dockerfile . ;
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
