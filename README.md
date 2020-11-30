@@ -174,6 +174,9 @@
     **Cass#30**
         **Multi-stage build**
             ➔ docker build -t prodapp -f build/production.Dockerfile . ;
+    **Cass#31**
+        **Docker-in-Docker**
+            ➔ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock docker:19.03.12;
 **Links*
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
