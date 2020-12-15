@@ -192,8 +192,9 @@
                 2. Ejecuta el contenedor
         ➔ Banderas: 
             docker run -it: 
-             ➔ -i: STDIN del contenedor.
-             ➔ -t: Indica que se requiere una pseudo terminal.
+             ➔ -i: STDIN del contenedor.             ➔ -t: Indica que se requiere una pseudo terminal.
+             ➔ -d: Ejecutar contenedores de fondo(background)
+        ➔ docker attach 6a33(idContainer or name)     
     Imagen:
         ➔ Es una plantilla de lectura, apartir de la que se crean los contenedores.
     Cliclos de Vida:
