@@ -17,7 +17,7 @@
                 ➔ Versionado
                 ➔ Equivalencia con entorno productivo
                 ➔ Servicios externos
-         3. Ejecutar:
+            3. Ejecutar:
                 ➔ Dependencias de aplicación
                 ➔ Compatibilidad del entorno productivo
                 ➔ Disponibilidad de servicios externos
@@ -180,7 +180,34 @@
 **8. Cierre**
     **Cass#32**
         **Cierre del curso**
-**Links*
+**Notes**
+    Commands:
+        ➔ docker info
+        ➔ docker --version
+        ➔ docker run hello-world
+        ➔ docker images
+        ➔ docker run: 
+            Realizaa 2 acciones, 
+                1. Crea el contenedor
+                2. Ejecuta el contenedor
+        ➔ Banderas: 
+            docker run -it: 
+             ➔ -i: STDIN del contenedor.
+             ➔ -t: Indica que se requiere una pseudo terminal.
+    Imagen:
+        ➔ Es una plantilla de lectura, apartir de la que se crean los contenedores.
+    Cliclos de Vida:
+        ➔ Se crea el contenedor a partir de una imagen
+        ➔ Se ejecuta un proceso determinado en el contenedor
+        ➔ El proceso finaliza y el contenedor se detiene
+        ➔ Se destruye el contenedor
+    Cliclos de Vida avanzado:
+        ➔ Se crea el contenedor a partir de una imagen
+        ➔ Se ejecuta un proceso determinado en el contenedor
+        ➔ Realizar acciones dentro del contenedor
+        ➔ Detener el contenedor
+        ➔ Lanzaar el contenedor nuevamente
+**Links**
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
     Wagodman:
