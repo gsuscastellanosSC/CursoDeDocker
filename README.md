@@ -82,16 +82,26 @@
         **Bind mounts**
             ➔ docker rm -f ${nameContainer};
             ➔ docker run -d --name dataBaseMongo -v ~/Documents/github/CursoDeDocker/dockerData:/data/db mongo;
+            ➔ docker run -d --name ${nameContainer} -v ${localPath}:${containerPath} ${nameContainer] ${RemoteContainer};
+                mongo
+                show dbs
+                use nameNewDb
+                db.users.insert({"nombre":"name", "":"", "":"", "":""})
+                db.users.find()
     **Class#14**
         **Volúmenes**
             ➔ docker volume ls;
             ➔ docker volume create ${nameContainer};
-            ➔ docker run -d --name db --mount src=${nameVolume},dst=/data/db mongo
+            ➔ docker run -d --name ${nameContainer} --mount src=${nameVolume},dst=/data/db mongo
+            ➔ docker run -d --name ${nameContainer} --mount src=${nameVolume},dst=${containerPath} ${RemoteContainer};
+            ➔ docker inspect ${nameContainer};
     **Class#15**
         **Insertar y extraer archivos de un contenedor**
-            ➔ docker run -d --name ${nameContainer} ubuntu tail -f /dev/null;
+            ➔ docker run -d --name ${nameContainer} {RemoteContainer} tail -f /dev/null;
             ➔ docker cp ${LocalNameFile} copytest:/${DirRempteName}/${RemoteFileName};
-            ➔ docker cp copytest:/${DirRemoteName} ${DirLocalName};
+            ➔ docker cp text.log ubuntu:/test/log.log
+            ➔ docker cp  ${nameContainer}:/${DirRemoteName} ${DirLocalName};
+            ➔ docker cp ubuntu:/test/log.log:/text.log 
 **4. Imágenes**
     **Class#16**
         **Conceptos fundamentales de Docker: imágenes**
