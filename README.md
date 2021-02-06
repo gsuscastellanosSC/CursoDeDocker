@@ -106,10 +106,12 @@
     **Class#16**
         **Conceptos fundamentales de Docker: imágenes**
             ➔ docker image ls;
+                Imagenes: plantillas o moldes a partir de la que se crean contenedores.
             ➔ docker pull ubuntu:${tag};
     **Class#17**
         **Construyendo una imagen propia**
             ➔ docker build -t ubuntu:platzi ~/Documents/github/CursoDeDocker/dockerFiles;
+            ➔ docker build -t ubuntu:${tagName} .;
             ➔ docker run -it ubuntu:${tag};
             ➔ docker tag ${REPOSITORY}:${TAG} ${propietario}/${so}:${tag};
             ➔ docker push gsuscastelsc/ubuntu:platzi;
@@ -122,18 +124,18 @@
         **Usando Docker para desarrollar aplicaciones**
             ➔ git clone https://github.com/platzi/docker;
             ➔ docker build -t platziapp .; 
-            ➔ docker run --rm -p 3000:3000 platziapp
+            ➔ docker run --rm -p 3000:3000 platziapp;
     **Class#20**
         **Aprovechando el caché de capas para estructurar correctamente tus imágenes**
             ➔ docker run --rm -p 3000:3000 -v /home/sc/Documents/github/CursoDeDocker/index.js:/usr/src/index.js platziapp
     **Class#21**
         **Docker networking: colaboración entre contenedores**
             ➔ docker network ls;
-            ➔ docker network create --attachable platziNet;
+            ➔ docker network create --attachable(permite que otros contenedores se conecten) platziNet;
             ➔ docker network inspect platziNet;
             ➔ docker run -d --name db mongo;
             ➔ docker network connect platziNet db;
-            ➔ docker run -d --name app -p 3000:3000 --env MONGO_URL=mongodb://db:27017/test platziapp;
+            ➔ docker run -d --name app -p 3000:3000 --env(asignar valiables de entorno) MONGO_URL=mongodb://db:27017/test platziapp;
             ➔ docker network connect platziNet app;
 **6. Docker Compose: la herramienta todo en uno**
     **Class#22**
@@ -147,6 +149,7 @@
                 ➔ docker-compose up -d;
     **Class#23**
         **Subcomandos de Docker Compose**
+            ➔ docker-compose ps;
             ➔ docker-compose logs -f ${nameContainer};
             ➔ docker-compose exec ${nameContainer} bash;
             ➔ docker-compose down;
@@ -218,6 +221,8 @@
         ➔ Realizar acciones dentro del contenedor
         ➔ Detener el contenedor
         ➔ Lanzaar el contenedor nuevamente
+    How install:
+        weblogic: docker run -d -p 7000:7001 -p 9001:9002 -it --name wl -v /github/u01/oracle/properties:/u01/oracle/properties container-registry.oracle.com/middleware/weblogic:12.2.1.3
 **Links**
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
