@@ -9,6 +9,6 @@ services:
       - db
     ports:
       - "3000-3001:3000"
-
+    name: bd
   db:
     image: mongo
