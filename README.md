@@ -222,8 +222,16 @@
        ➔ Detener el contenedor
        ➔ Lanzaar el contenedor nuevamente
     How install:
-        weblogic: docker run -d -p 7000:7001 -p 9001:9002 -it --name wl -v /github/u01/oracle/properties:/u01/oracle/properties container-registry.oracle.com/middleware/weblogic:12.2.1.3
-        Postgres: docker run -d -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
+        weblogic: 
+            ➔ docker run -d --network host --name wl -v /root/weblogic:/u01/oracle/properties container-registry.oracle.com/middleware/weblogic:12.2.1.3
+            ➔ docker exec -it wl bash
+            ➔ cd /u01/oracle/user_projects/domains/base_domain/nodemanager
+            ➔ sed -i 's/SecureListener=true/SecureListener=false/g' nodemanager.properties
+            ➔ cat nodemanager.properties
+            ➔ cd /u01/oracle/user_projects/domains/base_domain/bin && nohup ./startNodeManager.sh > nodemanager.log 2>&1 &
+            ➔ /u01/oracle/user_projects/domains/base_domain/autodeploy
+        Postgres: 
+            ➔ docker run -d -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
 # Links
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
