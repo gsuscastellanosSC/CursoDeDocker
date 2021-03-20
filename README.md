@@ -229,9 +229,26 @@
             ➔ sed -i 's/SecureListener=true/SecureListener=false/g' nodemanager.properties
             ➔ cat nodemanager.properties
             ➔ cd /u01/oracle/user_projects/domains/base_domain/bin && nohup ./startNodeManager.sh > nodemanager.log 2>&1 &
-            ➔ /u01/oracle/user_projects/domains/base_domain/autodeploy
+            ➔ cd /u01/oracle/user_projects/domains/base_domain/autodeploy
+            ➔ java weblogic.Deployer -adminurl t3://167.172.141.179:9005 -username weblogic -password Bolivar2021* -deploy -source /u01/oracle/user_projects/domains/base_domain/TestSegurosBolivar-1.2.war -targets Server-0
+               java weblogic.Deployer -adminurl t3://167.172.141.179:9005 -username weblogic -password Bolivar2021* -deploy -source /u01/oracle/user_projects/domains/base_domain/TestSegurosBolivar-1.2.war -targets AdminServer
+               java -cp ${pathWlClient} weblogic.Deployer -debug -remote -verbose -name ${war} -targets ${target} -adminurl t3s://${urlConsola} -user ${USERNAME} -password ${PASSWORD} -deploy
+               java -cp ${pathWlClient} weblogic.Deployer -adminurl t3s://${urlConsola} -username ${userW} -password ${passW} -deploy -source ${war} -targets ${target} 
+
+
+                java -cp /opt/wlfullclient.jar weblogic.Deployer -adminurl t3://167.172.141.179:9005 -username weblogic -password Bolivar2021* -deploy -source /u01/oracle/user_projects/domains/base_domain/TestSegurosBolivar.war -targets Server-0
+                
+               java -cp ${pathWlClient} weblogic.Deployer -debug -remote -verbose -name ${war} -targets ${target} -adminurl t3://${urlConsola} -user ${userW} -password ${passW} -deploy -stage -upload
+
+
+               java -cp /opt/wlfullclient.jar weblogic.Deployer -adminurl t3://167.172.141.179:9005 -username weblogic -password Bolivar2021* -deploy -source /u01/oracle/user_projects/domains/base_domain/TestSegurosBolivar.war -targets Server-0
+        
+        Oracle Data Base:
+            docker run -d -it --name bd -p 1521:1521 -p 2222:22 -v OracleDBData:/ORCL container-registry.oracle.com/database/enterprise:19.3.0.0 tail -f /dev/null;
         Postgres: 
             ➔ docker run -d -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
+        Jenkins:
+            sudo /etc/init.d/jenkins start
 # Links
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
