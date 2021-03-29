@@ -221,6 +221,9 @@
        ➔ Realizar acciones dentro del contenedor
        ➔ Detener el contenedor
        ➔ Lanzaar el contenedor nuevamente
+    Tips:
+        timedatectl set-timezone America/Bogota
+        sudo /etc/init.d/docker start || sudo service docker start || /etc/init.d/docker start
     How install:
         weblogic: 
             ➔ docker run -d --network host --name wl -v /root/weblogic:/u01/oracle/properties container-registry.oracle.com/middleware/weblogic:12.2.1.3
@@ -249,6 +252,8 @@
             ➔ docker run -d -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
         Jenkins:
             sudo /etc/init.d/jenkins start
+# Clear:
+    docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -aq);
 # Links
     Insall dockerCompose:
         https://docs.docker.com/compose/install/
