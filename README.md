@@ -225,7 +225,8 @@
         timedatectl set-timezone America/Bogota
         sudo /etc/init.d/docker start || sudo service docker start || /etc/init.d/docker start
     How install:
-        weblogic: 
+        weblogic:
+            ➔ docker login -u jesuscastellanospaez@gmail.com
             ➔ docker run -d --network host --name wl -v /root/weblogic:/u01/oracle/properties container-registry.oracle.com/middleware/weblogic:12.2.1.3
             ➔ docker exec -it wl bash
             ➔ cd /u01/oracle/user_projects/domains/base_domain/nodemanager
@@ -247,11 +248,18 @@
                java -cp /opt/wlfullclient.jar weblogic.Deployer -adminurl t3://167.172.141.179:9005 -username weblogic -password Bolivar2021* -deploy -source /u01/oracle/user_projects/domains/base_domain/TestSegurosBolivar.war -targets Server-0
         
         Oracle Data Base:
+            docker login container-registry.oracle.com;
             docker run -d -it --name bd -p 1521:1521 -p 2222:22 -v OracleDBData:/ORCL container-registry.oracle.com/database/enterprise:19.3.0.0 tail -f /dev/null;
+            docker run -d --name bd -p 1521:1521 -p 2222:22 container-registry.oracle.com/database/enterprise:latest;
+            docker log db;
         Postgres: 
             ➔ docker run -d -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres -c shared_buffers=256MB -c max_connections=200
         Jenkins:
+             docker build -t gsuscastelsc/jenkins:0.0.x .;
+            docker run --privileged -d --name jenkinsSB -p 9999:8080 -v /var/run/docker.sock:/var/run/docker.sock gsuscastelsc/jenkins:0.0.6
             sudo /etc/init.d/jenkins start
+        mysql:
+            mysql -h localhost -u root -pexample;
 # Clear:
     docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -aq);
 # Links
